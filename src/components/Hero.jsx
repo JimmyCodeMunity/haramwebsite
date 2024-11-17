@@ -1,11 +1,12 @@
 import React from "react";
+import * as Icon from 'react-feather'
 
 const Hero = () => {
   return (
     <div className="w-full">
       <div class="h-screen w-screen bg-neutral-200">
         <div class="mx-auto pt-16 sm:pt-24">
-          <div class="space-y-6 lg:space-y-0 lg:grid lg:grid-cols-12 lg:gap-8">
+          <div class="space-y-6 lg:space-y-0 md:grid md:grid-cols-12 md:gap-8 flex flex-row">
             <div class="px-6 sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:flex lg:items-center lg:text-left">
               <div class="space-y-8">
                 <div class="space-y-4">
@@ -111,17 +112,30 @@ const Hero = () => {
                     </svg>
                   </div>
                   <div class="h-4 border-l border-gray-700"></div>
-                  <div className="w-full flex-flex-row items-center space-x-4">
+                  <div className="w-full md:block hidden flex-flex-row items-center space-x-4">
                     <a href="">
                       <div
                         href=""
                         className="h-12 w-60 flex bg-red-500 rounded-xl justify-center items-center text-white text-xl font-semibold"
                       >
+                        <Icon.Download color="white" size={20}/>{" "}
                         Download App
                       </div>
                     </a>
                   </div>
                 </div>
+
+                <div className="w-full md:hidden block flex-flex-row items-center space-x-4">
+                    <a href="">
+                      <div
+                        href=""
+                        className="h-12 w-full flex space-x-2 bg-red-500 rounded-xl justify-center items-center text-white text-xl font-semibold"
+                      >
+                        <Icon.Download color="white" size={20}/>{" "}
+                        Download App
+                      </div>
+                    </a>
+                  </div>
               </div>
             </div>
 
@@ -129,7 +143,7 @@ const Hero = () => {
               <div class="px-6 h-96 lg:h-100% w-full max-w-2xl col-span-6 flex items-center mx-auto">
                 <div className="w-full h-full">
                   <div className="w-full h-full">
-                    <img src="../images/sig.png" alt="" />
+                    <img src="../images/sig.png" className="object-fit" alt="" />
                   </div>
                 </div>
               </div>
